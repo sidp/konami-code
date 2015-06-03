@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Konami Code Example</title>
+  <style>
+    body {
+      margin: 2em;
+      font-family: sans-serif;
+    }
+    code, pre {
+      border: 1px solid #abdaee;
+      background: #e7f4fa;
+      border-radius: 3px;
+    }
+    code {
+      padding: 2px 3px;
+    }
+    pre {
+      padding: 2px 4px 5px;
+    }
+    h1, h2 {
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      margin-top: 1.5em;
+    }
+    h1 + p, h2 + p {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Example</h1>
+  <p>Press the Konami Code to call the function: <code>↑ ↑ ↓ ↓ ← → ← → B A</code>.</p>
+  <h2>Code example</h2>
+  <p>This is a simple function that fires an alert box when the Konami Code is entered.</p>
+  <pre>var konamiCode = new KonamiCode(function () {
+  alert('Yay!');
+});</pre>
+  <p>An alert box isn’t any fun though, so you should go make something cooler!</p>
+  <script src="konami-code.js"></script>
+  <script>
+    (function () {
+      var konamiCode = new KonamiCode(function () {
+        alert('Yay!');
+    	});
+    })();
+  </script>
+</body>
+</html>
