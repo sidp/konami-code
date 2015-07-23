@@ -21,7 +21,7 @@ var KonamiCode = (function () {
     if (this.keys.length > this.code.length) {
       this.keys.splice(0, 1);
     }
-  }
+  };
 
   KonamiCode.prototype.validate = function validate () {
     var correct = true;
@@ -36,11 +36,11 @@ var KonamiCode = (function () {
         this.fire();
       }
     }
-  }
+  };
 
   KonamiCode.prototype.fire = function fire () {
     this.fn();
-  }
+  };
 
   return KonamiCode;
 })();
