@@ -16,14 +16,14 @@ var KonamiCode = (function () {
     }.bind(this));
   }
 
-  KonamiCode.prototype.capture = function (code) {
+  KonamiCode.prototype.capture = function capture (code) {
     this.keys.push(code);
     if (this.keys.length > this.code.length) {
       this.keys.splice(0, 1);
     }
   }
 
-  KonamiCode.prototype.validate = function () {
+  KonamiCode.prototype.validate = function validate () {
     var correct = true;
     if (this.keys.length === this.code.length) {
       for (var i = 0; i < this.keys.length; i++) {
@@ -38,7 +38,7 @@ var KonamiCode = (function () {
     }
   }
 
-  KonamiCode.prototype.fire = function () {
+  KonamiCode.prototype.fire = function fire () {
     this.fn();
   }
 
