@@ -16,8 +16,8 @@ var KonamiCode = (function () {
     }.bind(this));
   }
 
-  KonamiCode.prototype.capture = function capture (code) {
-    this.keys.push(code);
+  KonamiCode.prototype.capture = function capture (keyCode) {
+    this.keys.push(keyCode);
     if (this.keys.length > this.code.length) {
       this.keys.splice(0, 1);
     }
