@@ -1,18 +1,18 @@
 export class KonamiCode {
-  private keys: number[] = [];
+  private sequence: number[] = [];
   private code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-  private fn: () => void;
+  private callback: () => void;
 
-  constructor(fn: () => void) {
+  constructor(callback: () => void) {
     if (!(this instanceof KonamiCode)) {
       throw new Error('Constructor called as a function');
     }
 
-    if (!(typeof fn === 'function')) {
+    if (typeof callback !== 'function') {
       throw new Error('KonamiCode expects a callback function as argument');
     }
 
-    this.fn = fn;
+    this.callback = callback;
 
     document.addEventListener('keydown', this.handleKeyDown);
   }
@@ -23,17 +23,17 @@ export class KonamiCode {
   };
 
   private capture(keyCode: number) {
-    this.keys.push(keyCode);
-    if (this.keys.length > this.code.length) {
-      this.keys.splice(0, 1);
+    this.sequence.push(keyCode);
+    if (this.sequence.length > this.code.length) {
+      this.sequence.splice(0, 1);
     }
   }
 
   private validate() {
-    if (this.keys.length === this.code.length) {
+    if (this.sequence.length === this.code.length) {
       let correct = true;
-      for (var i = 0; i < this.keys.length; i++) {
-        if (this.keys[i] !== this.code[i]) {
+      for (let i = 0; i < this.sequence.length; i++) {
+        if (this.sequence[i] !== this.code[i]) {
           correct = false;
           break;
         }
@@ -45,7 +45,7 @@ export class KonamiCode {
   }
 
   private fire() {
-    this.fn.apply(this);
+    this.callback.apply(this);
   }
 
   public remove() {
@@ -53,6 +53,6 @@ export class KonamiCode {
   }
 }
 
-export default function konamiCode(fn: () => void) {
-  return new KonamiCode(fn);
+export default function konamiCode(callback: () => void) {
+  return new KonamiCode(callback);
 }
