@@ -45,7 +45,11 @@ export class KonamiCode {
   }
 
   private fire() {
-    this.fn();
+    this.fn.apply(this);
+  }
+
+  public remove() {
+    document.removeEventListener('keydown', this.handleKeyDown);
   }
 }
 

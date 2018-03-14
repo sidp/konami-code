@@ -18,6 +18,22 @@ konamiCode(() => {
 });
 ```
 
+If you want to remove the listener, call the remove() function on the returned object, or on `this` in the callback function:
+
+```js
+const kc = konamiCode(() => {
+  /* do stuff */
+});
+kc.remove();
+
+// - or -
+
+konamiCode(function() {
+  /* do stuff */
+  this.remove();
+});
+```
+
 ## Browser support
 
 This library supports all modern browsers, including Internet Explorer 9 and better.
