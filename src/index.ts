@@ -52,18 +52,16 @@ export default function konamiCode(callback: () => void) {
  * Compare two arrays of numbers
  */
 
-function sameSequence(a: number[], b: number[]) {
+export function sameSequence(a: number[], b: number[]) {
   if (a.length !== b.length) {
     return false;
   }
 
-  let same = true;
   for (let i = 0; i < a.length; i += 1) {
-    if (a[i] !== b[i]) {
-      same = false;
-      break;
+    if (a[i] != b[i]) {
+      return false;
     }
   }
 
-  return same;
+  return true;
 }
