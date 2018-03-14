@@ -30,17 +30,8 @@ export class KonamiCode {
   }
 
   private validate() {
-    if (this.sequence.length === this.code.length) {
-      let correct = true;
-      for (let i = 0; i < this.sequence.length; i++) {
-        if (this.sequence[i] !== this.code[i]) {
-          correct = false;
-          break;
-        }
-      }
-      if (correct) {
-        this.fire();
-      }
+    if (sameSequence(this.sequence, this.code)) {
+      this.fire();
     }
   }
 
@@ -55,4 +46,24 @@ export class KonamiCode {
 
 export default function konamiCode(callback: () => void) {
   return new KonamiCode(callback);
+}
+
+/**
+ * Compare two arrays of numbers
+ */
+
+function sameSequence(a: number[], b: number[]) {
+  if (a.length !== b.length) {
+    return false;
+  }
+
+  let same = true;
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] !== b[i]) {
+      same = false;
+      break;
+    }
+  }
+
+  return same;
 }
