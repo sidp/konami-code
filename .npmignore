@@ -1,0 +1,4 @@
+.prettierrc
+tsconfig.json
+__tests__
+src
