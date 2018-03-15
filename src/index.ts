@@ -46,6 +46,10 @@ export class KonamiCode {
   }
 }
 
+/**
+ * Attach a callback function that fires when the user enters the konami code.
+ */
+
 export default function konamiCode(callback: callbackFn) {
   return new KonamiCode(callback);
 }
