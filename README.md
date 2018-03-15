@@ -6,9 +6,13 @@ This is a small Javascript library to call functions when the user enters the Ko
 
 ## Usage
 
-Add a function by passing it as an argument to the KonamiCode constructor. Check the [example file](https://cdn.rawgit.com/sidp/konami-code-js/master/example.html) if you want to try it out.
+Install the package from npm:
 
-The library can either be loaded with a simple script tag or with a dependency manager such as RequireJS or Browserify. It supports both AMD or CommonJS.
+```sh
+npm install @sidp/konami-code
+```
+
+Import the package into your project. Add a function by passing it as an argument to the konamiCode function.
 
 ```js
 import konamiCode from '@sidp/konami-code';
