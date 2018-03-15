@@ -1,4 +1,4 @@
-# konami-code.js
+# konami-code
 
 This is a small Javascript library to call functions when the user enters the Konami Code.
 

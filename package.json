@@ -2,10 +2,9 @@
   "name": "@sidp/konami-code",
   "version": "0.1.0",
   "main": "lib/index.js",
-  "repository": "https://github.com/sidp/konami-code.js.git",
+  "repository": "https://github.com/sidp/konami-code.git",
   "author": "Peter Simonsson <peter@simonsson.com>",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
