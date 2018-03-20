@@ -1,5 +1,7 @@
 # konami-code
 
+![Build status](https://circleci.com/gh/sidp/konami-code.svg?style=shield&circle-token=60f119a2a516a777d99653c82df8c0cf7403cd52)
+
 This is a small Javascript library to call functions when the user enters the Konami Code.
 
 > ↑ ↑ ↓ ↓ ← → ← → B A
