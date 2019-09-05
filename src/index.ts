@@ -1,9 +1,9 @@
 export type callbackFn = (this: KonamiCode) => void;
 
 export class KonamiCode {
-  private sequence: number[] = [];
-  private code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-  private callback: callbackFn;
+  sequence: number[] = [];
+  code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+  callback: callbackFn;
 
   constructor(callback: callbackFn) {
     if (!(this instanceof KonamiCode)) {
