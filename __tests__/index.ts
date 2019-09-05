@@ -12,12 +12,6 @@ describe('konamiCode', () => {
     expect(kc instanceof KonamiCode).toBe(true);
   });
 
-  it('throws when called without a callback function', () => {
-    expect(() => {
-      const kc = konamiCode();
-    }).toThrowError(/expects a callback function/);
-  });
-
   it('registers pressed keys', () => {
     const presses = [37, 66, 38];
     const kc = konamiCode(() => {});
@@ -58,7 +52,7 @@ describe('konamiCode', () => {
     expect(callback.mock.calls.length).toBe(1);
   });
 
-  it('can call remove from closeure', () => {
+  it('can call remove from closure', () => {
     const callback = jest.fn();
     const kc = konamiCode(function() {
       callback();
