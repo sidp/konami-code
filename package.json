@@ -1,6 +1,6 @@
 {
   "name": "@sidp/konami-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "repository": "https://github.com/sidp/konami-code.git",
   "author": "Peter Simonsson <peter@simonsson.com>",
